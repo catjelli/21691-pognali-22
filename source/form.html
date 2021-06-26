@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" class="page">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Направления | Погнали</title>
     <link rel="icon" href="img/favicon/favicon-ico.ico">
@@ -17,12 +17,13 @@
     <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font">
   </head>
 
-  <body>
-    <header>
-      <nav>
-        <a href="index.html">
-          <img src="img/logo_s.svg" width="96" height="15">
-        </a>
+  <body class="page__body">
+
+    <header class="page-header">
+      <a href="index.html">
+        <img src="img/logo_s.svg" width="96" height="15" alt="Логотип сайта Погнали">
+      </a>
+      <nav class="navigation">
         <ul>
           <li>
             <a href="!#">О сервисе</a>
@@ -58,37 +59,39 @@
     </header>
 
     <main>
-      <h1>Направления</h1>
-      <section>
-        <div>
-          <p>80</p>
-          <p>level</p>
+      <div class="form-cover">
+        <h1 class="form-cover__title">Направления</h1>
+      </div>
+      <section class="profile">
+        <div class="profile__level">
+          <p class="profile__level-number">80</p>
+          <p class="profile__level-text">level</p>
         </div>
-        <img src="img/demin-s.jpg" width="270" height="270">
-        <a href="!#">Сменить фото</a>
-        <div>
-          <p>Тэги</p>
-          <p>#бургер #бар #футбол #концерт #крафт</p>
+        <img class="profile__img" src="img/demin-s.jpg" width="270" height="270" alt="Фотография пользователя">
+        <a class="profile__link" href="!#">Сменить фото</a>
+        <div class="tags">
+          <p class="tags__title">Тэги</p>
+          <p class="tags__text">#бургер #бар #футбол #концерт #крафт</p>
         </div>
-        <div>
-          <p>Транспорт</p>
-          <ul>
-            <li>
+        <div class="transport">
+          <p class="transport__title">Транспорт</p>
+          <ul class="transport__list">
+            <li class="transport__item transport__item--airplane">
               <svg width="19" height="21">
                 <use xlink:href="img/sprite.svg#icon-airplane"></use>
               </svg>
             </li>
-            <li>
+            <li class="transport__item transport__item--bus">
               <svg width="18" height="20">
                 <use xlink:href="img/sprite.svg#icon-bus"></use>
               </svg>
             </li>
-            <li>
+            <li class="transport__item transport__item--bicycle">
               <svg width="24" height="24">
                 <use xlink:href="img/sprite.svg#icon-bicycle"></use>
               </svg>
             </li>
-            <li>
+            <li class="transport__item transport__item--run">
               <svg width="22" height="24">
                 <use xlink:href="img/sprite.svg#icon-run"></use>
               </svg>
@@ -97,403 +100,427 @@
         </div>
       </section>
 
-      <section>
-        <h2>Мои планы:</h2>
-        <article>
+      <section class="plans">
+        <h2 class="plans__header">Мои планы:</h2>
+        <article class="plans__country">
           <h3>1. Франция, Италия</h3>
           <p>3 попутчика</p>
           <p>26 мар — 29 мар</p>
-          <a href="!#">Изменить</a>
+          <a class="plans__change-button" href="!#">Изменить</a>
         </article>
-        <article>
+        <article class="plans__country">
           <h3>1. Таиланд, Индонезия</h3>
           <p>1 попутчик</p>
           <p>1 июл — 15 июл</p>
-          <a href="!#">Изменить</a>
+          <a class="plans__change-button" href="!#">Изменить</a>
         </article>
       </section>
 
-      <section>
-        <h2>Добавить план:</h2>
-        <ul>
+      <section class="planning">
+        <h2 class="planning__header">Добавить план:</h2>
+        <ul class="planning__buttons">
           <li>
-            <button type="button"></button>
+            <button class="planning__button planning__button--active" type="button"></button>
           </li>
           <li>
-            <button type="button"></button>
+            <button class="planning__button" type="button"></button>
           </li>
           <li>
-            <button type="button"></button>
+            <button class="planning__button" type="button"></button>
           </li>
         </ul>
-        <form>
-          <section>
-            <h3>Шаг 1. Даты пребывания</h3>
-            <p>Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+        <form class="planning-form" method="POST" action="https://echo.htmlacademy.ru">
+          <section class="planning-form__step">
+            <h3 class="planning-form__header">Шаг 1.<br>Даты пребывания</h3>
+            <p class="planning-form__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
             <div>
-              <input type="text" placeholder="2">
-              <label>Ищу попутчиков: <span>Чел.</span></label>
-              <button type="button">Минус</button>
-              <button type="button">Плюс</button>
+              <label class="planning-form__label" for="companions">Ищу попутчиков: <span class="planning-form__unit">Чел.</span></label>
+              <input class="planning-form__input planning-form__input--text" type="text" id="companions" value="2">
+              <button class="planning-form__button-minus" type="button">Минус</button>
+              <button class="planning-form__button-plus" type="button">Плюс</button>
             </div>
             <div>
-              <input type="text" placeholder="3">
-              <label>Длительность: <span>Дн.</span></label>
-              <button type="button">Минус</button>
-              <button type="button">Плюс</button>
+              <label class="planning-form__label" for="days">Длительность: <span class="planning-form__unit">Дн.</span></label>
+              <input class="planning-form__input planning-form__input--text" type="text" id="days" value="3">
+              <button class="planning-form__button-minus" type="button">Минус</button>
+              <button class="planning-form__button-plus" type="button">Плюс</button>
             </div>
             <div>
-              <input type="checkbox" checked>
-              <label>Можно с детьми</label>
+              <input class="planning-form__input planning-form__input--checkbox" type="checkbox" id="kids" checked>
+              <label class="planning-form__label planning-form__label--kids" for="kids">Можно с детьми</label>
             </div>
             <div>
-              <button type="button">Назад</button>
-              <p>Март 2019</p>
-              <button type="button">Вперед</button>
-              <table>
-                <thead>
+              <button class="planning-form__button-back" type="button">Назад</button>
+              <p class="planning-form__dates">Март 2019</p>
+              <button class="planning-form__button-forward" type="button">Вперед</button>
+              <table class="planning-form__dates-table dates-table">
+                <thead class="dates-table__head">
                   <tr>
-                    <td>П</td>
-                    <td>В</td>
-                    <td>С</td>
-                    <td>Ч</td>
-                    <td>П</td>
-                    <td>С</td>
-                    <td>В</td>
+                    <td class="dates-table__head-item">П</td>
+                    <td class="dates-table__head-item">В</td>
+                    <td class="dates-table__head-item">С</td>
+                    <td class="dates-table__head-item">Ч</td>
+                    <td class="dates-table__head-item">П</td>
+                    <td class="dates-table__head-item dates-table__head-item--weekend">С</td>
+                    <td class="dates-table__head-item dates-table__head-item--weekend">В</td>
                   </tr>
                 </thead>
                 <tr>
-                  <td>
-                    <input type="checkbox">
-                    <label>23</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="february-23" disabled>
+                    <label class="dates-table__label" for="february-23">23</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>24</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="february-24" disabled>
+                    <label class="dates-table__label" for="february-24">24</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>25</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="february-25" disabled>
+                    <label class="dates-table__label" for="february-25">25</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>26</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="february-26" disabled>
+                    <label class="dates-table__label" for="february-26">26</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>27</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="february-27" disabled>
+                    <label class="dates-table__label" for="february-27">27</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>28</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="february-28" disabled>
+                    <label class="dates-table__label" for="february-28">28</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>1</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox">
-                    <label>2</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>3</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>4</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>5</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>6</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>7</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>8</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-1" disabled>
+                    <label class="dates-table__label" for="march-1">1</label>
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    <input type="checkbox">
-                    <label>9</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-2" disabled>
+                    <label class="dates-table__label" for="march-2">2</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>10</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-3" disabled>
+                    <label class="dates-table__label" for="march-3">3</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>11</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-4" disabled>
+                    <label class="dates-table__label" for="march-4">4</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>12</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-5" disabled>
+                    <label class="dates-table__label" for="march-5">5</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>13</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-6" disabled>
+                    <label class="dates-table__label" for="march-6">6</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>14</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-7" disabled>
+                    <label class="dates-table__label" for="march-7">7</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>15</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox">
-                    <label>16</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>17</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>18</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>19</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>20</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>21</label>
-                  </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>22</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-8" disabled>
+                    <label class="dates-table__label" for="march-8">8</label>
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    <input type="checkbox">
-                    <label>23</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-9" disabled>
+                    <label class="dates-table__label" for="march-9">9</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>24</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-10" disabled>
+                    <label class="dates-table__label" for="march-10">10</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>25</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-11" disabled>
+                    <label class="dates-table__label" for="march-11">11</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>26</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-12" disabled>
+                    <label class="dates-table__label" for="march-12">12</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>27</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-13" disabled>
+                    <label class="dates-table__label" for="march-13">13</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>28</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-14" disabled>
+                    <label class="dates-table__label" for="march-14">14</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>29</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-15" disabled>
+                    <label class="dates-table__label" for="march-15">15</label>
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    <input type="checkbox">
-                    <label>30</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-16" disabled>
+                    <label class="dates-table__label" for="march-16">16</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>31</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-17" disabled>
+                    <label class="dates-table__label" for="march-17">17</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>1</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-18" disabled>
+                    <label class="dates-table__label" for="march-18">18</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>2</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-19" disabled>
+                    <label class="dates-table__label" for="march-19">19</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>3</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-20" disabled>
+                    <label class="dates-table__label" for="march-20">20</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>4</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-21" disabled>
+                    <label class="dates-table__label" for="march-21">21</label>
                   </td>
-                  <td>
-                    <input type="checkbox">
-                    <label>5</label>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-22" disabled>
+                    <label class="dates-table__label" for="march-22">22</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-23" disabled>
+                    <label class="dates-table__label" for="march-23">23</label>
+                  </td>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-24" disabled>
+                    <label class="dates-table__label" for="march-24">24</label>
+                  </td>
+                  <td class="dates-table__item dates-table__item--disabled">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-25" disabled>
+                    <label class="dates-table__label" for="march-25">25</label>
+                  </td>
+                  <td class="dates-table__item dates-table__item--checked">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-26" checked>
+                    <label class="dates-table__label" for="march-26">26</label>
+                  </td>
+                  <td class="dates-table__item dates-table__item--checked">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-27" checked>
+                    <label class="dates-table__label" for="march-27">27</label>
+                  </td>
+                  <td class="dates-table__item dates-table__item--checked">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-28" checked>
+                    <label class="dates-table__label" for="march-28">28</label>
+                  </td>
+                  <td class="dates-table__item">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-29">
+                    <label class="dates-table__label" for="march-29">29</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="dates-table__item">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-30">
+                    <label class="dates-table__label" for="march-30">30</label>
+                  </td>
+                  <td class="dates-table__item">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="march-31">
+                    <label class="dates-table__label" for="march-31">31</label>
+                  </td>
+                  <td class="dates-table__item">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="april-1">
+                    <label class="dates-table__label" for="april-1">1</label>
+                  </td>
+                  <td class="dates-table__item">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="april-2">
+                    <label class="dates-table__label" for="april-2">2</label>
+                  </td>
+                  <td class="dates-table__item">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="april-3">
+                    <label class="dates-table__label" for="april-3">3</label>
+                  </td>
+                  <td class="dates-table__item">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="april-4">
+                    <label class="dates-table__label" for="april-4">4</label>
+                  </td>
+                  <td class="dates-table__item">
+                    <input class="visually-hidden dates-table__checkbox" type="checkbox" id="april-5">
+                    <label class="dates-table__label" for="april-5">5</label>
                   </td>
                 </tr>
               </table>
             </div>
-            <a href="!#">Следующий шаг</a>
+            <a class="planning-form__step-button" href="!#">Следующий шаг</a>
           </section>
 
-          <section>
-            <h3>Шаг 2. Маршрут</h3>
-            <p>Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
-            <ul>
-              <li>
-                <button type="button">Босния и Герцеговина</button>
-                <img src="img/flags/bosnia_and_herzegovina.png" width="70" height="47">
-                <button type="button">Удалить страну</button>
+          <section class="planning-form__step">
+            <h3 class="planning-form__header">Шаг 2.<br>Маршрут</h3>
+            <p class="planning-form__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+            <ul class="planning-form__route planning-route">
+              <li class="planning-route__item">
+                <button class="planning-route__country" type="button">Босния и Герцеговина</button>
+                <img class="planning-route__country-img" src="img/flags/bosnia_and_herzegovina.png" width="70" height="47" alt="Флаг Боснии и Герцеговины">
+                <button class="planning-route__country-delete" type="button">Удалить страну</button>
               </li>
-              <li>
-                <button type="button">Чехия</button>
-                <img src="img/flags/czechia.png" width="70" height="47">
-                <button type="button">Удалить страну</button>
+              <li class="planning-route__item">
+                <button class="planning-route__country" type="button">Чехия</button>
+                <img class="planning-route__country-img" src="img/flags/czechia.png" width="70" height="47" alt="Флаг Чехии">
+                <button class="planning-route__country-delete" type="button">Удалить страну</button>
               </li>
-              <li>
-                <button type="button">Выберите странц</button>
+              <li class="planning-route__item">
+                <button class="planning-route__country" type="button">Выберите страну</button>
                 <button type="button">Показать выпадающий список</button>
                 <button type="button">Закрыть выпадающий список</button>
-                <ul>
-                  <li>
-                    <a href="!#">А</a>
+                <ul class="planning-route__alphabet alphabet">
+                  <li class="alphabet__item alphabet__item--active">
+                    <a class="alphabet__link" href="!#">А</a>
                   </li>
-                  <li>
-                    <a href="!#">Б</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Б</a>
                   </li>
-                  <li>
-                    <a href="!#">В</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">В</a>
                   </li>
-                  <li>
-                    <a href="!#">Г</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Г</a>
                   </li>
-                  <li>
-                    <a href="!#">Д</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Д</a>
                   </li>
-                  <li>
-                    <a href="!#">Е</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Е</a>
                   </li>
-                  <li>
-                    <a href="!#">З</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">З</a>
                   </li>
-                  <li>
-                    <a href="!#">И</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">И</a>
                   </li>
-                  <li>
-                    <a href="!#">К</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">К</a>
                   </li>
-                  <li>
-                    <a href="!#">Л</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Л</a>
                   </li>
-                  <li>
-                    <a href="!#">М</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">М</a>
                   </li>
-                  <li>
-                    <a href="!#">Н</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Н</a>
                   </li>
-                  <li>
-                    <a href="!#">О</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">О</a>
                   </li>
-                  <li>
-                    <a href="!#">П</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">П</a>
                   </li>
-                  <li>
-                    <a href="!#">Р</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Р</a>
                   </li>
-                  <li>
-                    <a href="!#">С</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">С</a>
                   </li>
-                  <li>
-                    <a href="!#">Т</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Т</a>
                   </li>
-                  <li>
-                    <a href="!#">У</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">У</a>
                   </li>
-                  <li>
-                    <a href="!#">Ф</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Ф</a>
                   </li>
-                  <li>
-                    <a href="!#">Х</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Х</a>
                   </li>
-                  <li>
-                    <a href="!#">Ч</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Ч</a>
                   </li>
-                  <li>
-                    <a href="!#">Ш</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Ш</a>
                   </li>
-                  <li>
-                    <a href="!#">Э</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Э</a>
                   </li>
-                  <li>
-                    <a href="!#">Ю</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Ю</a>
                   </li>
-                  <li>
-                    <a href="!#">Я</a>
+                  <li class="alphabet__item">
+                    <a class="alphabet__link" href="!#">Я</a>
                   </li>
                 </ul>
-                <ul>
-                  <li>Австралия</li>
-                  <li>Австрия</li>
-                  <li>Азербайджан</li>
-                  <li>Албания</li>
-                  <li>Алжир</li>
-                  <li>Ангола</li>
-                  <li>Андорра</li>
-                  <li>Антигуа и Барбуда</li>
-                  <li>Аргентина</li>
-                  <li>Армения</li>
-                  <li>Афганистан</li>
+                <ul class="planning-route__countries-list countries">
+                  <li class="countries__item">
+                    <a class="countries__link" href="!#">Австралия</a>
+                  </li>
+                  <li class="countries__item">
+                    <a class="countries__link" href="!#">Австрия</a>
+                  </li>
+                  <li class="countries__item">
+                    <a class="countries__link" href="!#">Азербайджан</a>
+                  </li>
+                  <li class="countries__item">
+                    <a class="countries__link" href="!#">Албания</a>
+                  </li>
+                  <li class="countries__item">
+                    <a class="countries__link" href="!#">Алжир</a>
+                  </li>
+                  <li class="countries__item">
+                    <a class="countries__link" href="!#">Ангола</a>
+                  </li>
+                  <li class="countries__item">
+                    <a class="countries__link" href="!#">Андорра</a>
+                  </li>
+                  <li class="countries__item">
+                    <a class="countries__link" href="!#">Антигуа и Барбуда</a>
+                  </li>
+                  <li class="countries__item">
+                    <a class="countries__link" href="!#">Аргентина</a>
+                  </li>
+                  <li class="countries__item">
+                    <a class="countries__link" href="!#">Армения</a>
+                  </li>
+                  <li class="countries__item">
+                    <a class="countries__link" href="!#">Афганистан</a>
+                  </li>
                 </ul>
                 <button type="button">Удалить страну</button>
               </li>
-              <li>
-                <button type="button">Добавить страну</button>
+              <li class="planning-route__item">
+                <button class="planning-route__country planning-route__country--add" type="button">Добавить страну</button>
                 <button type="button">Показать выпадающий список</button>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="!#">Следующий шаг</a>
+                <a class="planning-form__step-button" href="!#">Следующий шаг</a>
               </li>
               <li>
-                <a href="!#">На шаг назад</a>
+                <a class="planning-form__step-button planning-form__step-button--back" href="!#">На шаг назад</a>
               </li>
             </ul>
           </section>
-          <section>
-            <h3>Шаг 3. Развлечения</h3>
-            <p>Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-            <div>
+          <section  class="planning-form__step">
+            <h3 class="planning-form__header">Шаг 3.<br>Развлечения</h3>
+            <p class="planning-form__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <div class="entertainments-country">
               <div>
-                <p>Босния и Герцеговина</p>
-                <img src="img/flags/bosnia_and_herzegovina.png" width="70" height="47">
+                <p class="entertainments-country__header">Босния и Герцеговина</p>
+                <img class="entertainments-country__img" src="img/flags/bosnia_and_herzegovina.png" width="70" height="47" alt="Флаг Боснии и Герцеговины">
               </div>
-              <textarea rows="10" placeholder="План действий"></textarea>
+              <label for="first-country-plans" class="visually-hidden">План действий в стране</label>
+              <textarea class="entertainments-country__textarea" id="first-country-plans" cols="30" rows="10" placeholder="План действий"></textarea>
             </div>
-            <div>
+            <div class="entertainments-country">
               <div>
-                <p>Чехия</p>
-                <img src="img/flags/czechia.png" width="70" height="47">
+                <p class="entertainments-country__header">Чехия</p>
+                <img class="entertainments-country__img" src="img/flags/czechia.png" width="70" height="47" alt="Флаг Чехии">
               </div>
-              <textarea rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              <label for="second-country-plans" class="visually-hidden">План действий в стране</label>
+              <textarea class="entertainments-country__textarea" id="second-country-plans" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
             </div>
             <ul>
               <li>
-                <button type="submit">Отправить</a>
+                <button class="planning-form__submit-button" type="submit">Отправить</button>
               </li>
               <li>
-                <a href="!#">На шаг назад</a>
+                <a class="planning-form__step-button planning-form__step-button--back" href="!#">На шаг назад</a>
               </li>
             </ul>
           </section>
@@ -501,24 +528,40 @@
       </section>
     </main>
 
-    <footer>
-      <a>
-        <img src="img/logo_s.svg" width="96" height="15">
+    <footer class="page-footer">
+      <a class="page-footer__link" href="index.html">
+        <img class="page-footer__logo" src="img/logo-s-blue.svg" width="96" height="15" alt="Логотип сайта Погнали">
       </a>
-      <ul>
-        <li>
-          <a href="!#">Facebook</a>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="!#">
+            <svg width="14" height="28">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
-        <li>
-          <a href="!#">VK</a>
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="!#">
+            <svg width="31" height="16">
+              <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+            </svg>
+          </a>
         </li>
-        <li>
-          <a href="!#">Instagram</a>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="!#">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
         </li>
       </ul>
-      <div>
-        <p>Разработано</p>
-        <a href="!#">HTML Academy</a>
+      <div class="copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="!#">
+          <svg width="27" height="34">
+            <use xlink:href="img/sprite.svg#icon-html"></use>
+          </svg>
+        </a>
       </div>
     </footer>
 

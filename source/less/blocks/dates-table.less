@@ -1,0 +1,28 @@
+.dates-table {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.dates-table__head-item--weekend {
+  color: @bright-orange;
+}
+
+.dates-table__item {
+  line-height: 18px;
+  color: @basic-blue-light;
+  background-color: @background-blue-light;
+
+  &--disabled {
+    color: @special-grey;
+    opacity: 0.3;
+    background-color: @basic-white;
+  }
+
+  &--checked {
+    color: @basic-white;
+    background-color: @basic-blue-light;
+  }
+}
