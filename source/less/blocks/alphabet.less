@@ -1,5 +1,13 @@
-.alphabet__item--active {
-  background-color: @background-blue-light;
+.alphabet__item {
+  background-color: @basic-white;
+
+  &--form-active {
+    background-color: @background-blue-light;
+  }
+
+  &--catalog-active {
+    background-color: @basic-blue-light;
+  }
 }
 
 .alphabet__link {
@@ -7,4 +15,8 @@
   line-height: 18px;
   font-weight: 400;
   color: @basic-blue-light;
+
+  &--catalog-active {
+    color: @basic-white;
+  }
 }

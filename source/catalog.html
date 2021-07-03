@@ -16,39 +16,40 @@
     <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
     <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font">
   </head>
-  <body>
 
-    <header>
-      <nav>
-        <a href="index.html">
-         <img src="img/logo_s.svg" width="96" height="15">
-        </a>
-       <ul>
-         <li>
-           <a href="!#">О сервисе</a>
-         </li>
-         <li>
-           <a href="form.html">Направления</a>
-        </li>
+  <body class="page__body">
+
+    <header class="page-header">
+      <a href="index.html">
+        <img src="img/logo_s.svg" width="96" height="15" alt="Логотип сайта Погнали">
+      </a>
+      <nav class="navigation">
+        <ul>
           <li>
-          <a href="!#">Попутчики</a>
+            <a href="!#">О сервисе</a>
+          </li>
+          <li>
+            <a href="!#">Направления</a>
+          </li>
+          <li>
+            <a href="catalog.html">Попутчики</a>
           </li>
         </ul>
-      <a href="!#">Авторизация</a>
+        <a href="!#">Авторизация</a>
         <ul>
-         <li>
+          <li>
             <a href="tel:88005558628">8 800 555-86-28</a>
-        </li>
-        <li>
+          </li>
+          <li>
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-         </li>
+          </li>
         </ul>
         <ul>
-        <li>
+          <li>
             <a href="!#">Facebook</a>
           </li>
           <li>
-           <a href="!#">VK</a>
+            <a href="!#">VK</a>
           </li>
           <li>
             <a href="!#">Instagram</a>
@@ -56,24 +57,29 @@
         </ul>
       </nav>
     </header>
+
     <main>
-      <h1>Попутчики</h1>
-      <section>
-        <h2>Фильтрация по странам</h2>
-        <ul>
-          <li>
-            <a href="!#">Европа</a>
+      <div class="page-cover">
+        <h1 class="page-cover__title">Попутчики</h1>
+      </div>
+      <section class="country-filter">
+        <h2 class="country-filter__header">Фильтрация по странам:</h2>
+        <ul class="country-filter__list">
+          <li class="country-filter__item">
+            <a class="country-filter__link country-filter__link--active" href="!#">Европа</a>
           </li>
-          <li>
-            <a href="!#">Азия</a>
+          <li class="country-filter__item">
+            <a class="country-filter__link" href="!#">Азия</a>
           </li>
-          <li>
-            <a href="!#">Америка</a>
+          <li class="country-filter__item">
+            <a class="country-filter__link" href="!#">Америка</a>
           </li>
-          <li>
-            <a href="!#">Острова</a>
+          <li class="country-filter__item">
+            <a class="country-filter__link" href="!#">Острова</a>
           </li>
         </ul>
+        <button class="country-filter__close-up" type="button">Закрыть фильтр</button>
+       <!--
         <ul>
           <li>
             <input type="radio">
@@ -715,94 +721,211 @@
             </ul>
           </li>
         </ul>
-        <button type="button">Свернуть</button>
+        -->
+        <ul class="planning-route__alphabet alphabet">
+          <li class="alphabet__item alphabet__item--catalog-active">
+            <a class="alphabet__link alphabet__link--catalog-active" href="!#">А</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Б</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">В</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Г</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Д</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Е</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">З</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">И</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">К</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Л</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">М</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Н</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">О</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">П</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Р</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">С</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Т</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">У</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Ф</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Х</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Ч</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Ш</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Э</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Ю</a>
+          </li>
+          <li class="alphabet__item">
+            <a class="alphabet__link" href="!#">Я</a>
+          </li>
+        </ul>
+        <ul class="planning-route__countries-list countries">
+          <li class="countries__item">
+            <a class="countries__link" href="!#">Австралия</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="!#">Австрия</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="!#">Азербайджан</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="!#">Албания</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="!#">Алжир</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="!#">Ангола</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="!#">Андорра</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="!#">Антигуа и Барбуда</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="!#">Аргентина</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="!#">Армения</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="!#">Афганистан</a>
+          </li>
+        </ul>
+
+        <button class="country-filter__close-down" type="button">Свернуть</button>
       </section>
 
-      <section>
-        <h2>Выберите идеального попутчика</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <fieldset>
-            <legend>Хобби:</legend>
-            <ul>
-              <li>
-                <input type="checkbox">
-                <label>Спортзал</label>
+      <section class="companions-catalog">
+        <h2 class="companions-catalog__header">Подберите идеального попутчика</h2>
+        <form class="companions-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="companions-form__fieldset">
+            <legend class="companions-form__legend">Хобби:</legend>
+            <button class="companions-form__button">Показать/скрыть поле</button>
+            <ul class="companions-form__list">
+              <li class="companions-form__item">
+                <input id="gym" type="checkbox">
+                <label for="gym">Спортзал</label>
               </li>
-              <li>
-                <input type="checkbox">
-                <label>Кальян</label>
+              <li class="companions-form__item">
+                <input id="hookah" type="checkbox">
+                <label for="hookah">Кальян</label>
               </li>
-              <li>
-                <input type="checkbox">
-                <label>Диван</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Музыка:</legend>
-            <ul>
-              <li>
-                <input type="checkbox">
-                <label>Тяжелый рок</label>
-              </li>
-              <li>
-                <input type="checkbox">
-                <label>Русский рэп</label>
-              </li>
-              <li>
-                <input type="checkbox">
-                <label>Евродэнс</label>
+              <li class="companions-form__item">
+                <input id="sofa" type="checkbox">
+                <label for="sofa">Диван</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
-            <legend>Еда:</legend>
-            <ul>
-              <li>
-                <input type="checkbox">
-                <label>Мясоед</label>
+          <fieldset class="companions-form__fieldset">
+            <legend class="companions-form__legend">Музыка:</legend>
+            <button class="companions-form__button">Показать/скрыть поле</button>
+            <ul class="companions-form__list">
+              <li class="companions-form__item">
+                <input id="hard-rock" type="checkbox">
+                <label for="hard-rock">Тяжелый рок</label>
               </li>
-              <li>
-                <input type="checkbox">
-                <label>Сидит на ПП</label>
+              <li class="companions-form__item">
+                <input id="russian-rap" type="checkbox">
+                <label for="russian-rap">Русский рэп</label>
               </li>
-              <li>
-                <input type="checkbox">
-                <label>Веган-сыроед</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Транспорт:</legend>
-            <ul>
-              <li>
-                <input type="checkbox">
-                <label>Самолет</label>
-              </li>
-              <li>
-                <input type="checkbox">
-                <label>Авто</label>
-              </li>
-              <li>
-                <input type="checkbox">
-                <label>Велосипед</label>
-              </li>
-              <li>
-                <input type="checkbox">
-                <label>Пешком</label>
+              <li class="companions-form__item">
+                <input id="euro-dance" type="checkbox">
+                <label for="euro-dance">Евродэнс</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
-            <legend>Левел</legend>
+          <fieldset class="companions-form__fieldset">
+            <legend class="companions-form__legend">Еда:</legend>
+            <button class="companions-form__button">Показать/скрыть поле</button>
+            <ul class="companions-form__list">
+              <li class="companions-form__item">
+                <input id="meat" type="checkbox">
+                <label for="meat">Мясоед</label>
+              </li>
+              <li class="companions-form__item">
+                <input id="diet" type="checkbox">
+                <label for="diet">Сидит на ПП</label>
+              </li>
+              <li class="companions-form__item">
+                <input id="vegan" type="checkbox">
+                <label for="vegan">Веган-сыроед</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="companions-form__fieldset">
+            <legend class="companions-form__legend">Транспорт:</legend>
+            <button class="companions-form__button">Показать/скрыть поле</button>
+            <ul class="companions-form__list">
+              <li class="companions-form__item">
+                <input id="airplane" type="checkbox">
+                <label for="airplane">Самолет</label>
+              </li>
+              <li class="companions-form__item">
+                <input id="car" type="checkbox">
+                <label for="car">Авто</label>
+              </li>
+              <li class="companions-form__item">
+                <input id="bicycle" type="checkbox">
+                <label for="bicycle">Велосипед</label>
+              </li>
+              <li class="companions-form__item">
+                <input id="afoot" type="checkbox">
+                <label for="afoot">Пешком</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="companions-form__fieldset">
+            <legend class="companions-form__legend">Левел:</legend>
+            <button class="companions-form__button">Показать/скрыть поле</button>
             <div class="range-filter">
               <div class="level-controls">
-                <label class="min-level">
-                  От <input type="number" name="min-level" value="30">
-                </label>
-                <label class="max-level">
-                  До <input type="number" name="max-level" value="100">
-                </label>
+                <input class="level-controls__min-level" id="min-level" type="number" name="min-level" value="30">
+                <label class="min-level visually-hidden" for="min-level">От</label>
+                <input class="level-controls__max-level" id="max-level" type="number" name="max-level" value="100">
+                <label class="max-level visually-hidden" for="max-level">До</label>
               </div>
               <div class="range-controls">
                 <div class="scale">
@@ -815,25 +938,31 @@
               </div>
             </div>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="companions-catalog__button" type="submit">Показать</button>
         </form>
       </section>
 
-      <section>
+      <section class="companions">
         <h2 class="visually-hidden">Список попутчиков</h2>
-        <article>
-          <img src="img/firsova-s.jpg" width="270" height="270">
-          <h3>Таня Фирсова</h3>
-          <p>1,5 М</p>
-          <p>#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-          <p>хочет посетить:</p>
-          <ul>
+        <article class="user">
+          <img class="user__img" src="img/firsova-s.jpg" width="270" height="270" alt="Аватар пользователя Таня Фирсова">
+          <h3 class="user__header">Таня Фирсова</h3>
+          <div class="user__status user__status--offline"></div>
+          <button class="user__like-button user__like-button--active" type="button">
+            <svg width="13" height="11">
+              <use xlink:href="img/sprite.svg#icon-like-active"></use>
+            </svg>
+          </button>
+          <p class="user__subscribers">1,5 М</p>
+          <p class="user__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+          <p class="user__legend">хочет посетить:</p>
+          <ul class="user__countries">
             <li>Шри-Ланка</li>
             <li>Таиланд</li>
             <li>Сейшелы</li>
           </ul>
-          <p>транспорт:</p>
-          <ul>
+          <p class="user__legend">транспорт:</p>
+          <ul class="user__transport">
             <li>
               <svg width="19" height="21">
                 <use xlink:href="img/sprite.svg#icon-airplane"></use>
@@ -855,22 +984,28 @@
               </svg>
             </li>
           </ul>
-          <p>левел:</p>
-          <p>99</p>
-          <a href="!#">Позвать!</a>
+          <p class="user__legend">левел:</p>
+          <p class="user__level">99</p>
+          <a class="user__button button-yellow" href="!#">Позвать!</a>
         </article>
-        <article>
-          <img src="img/demin-s.jpg" width="270" height="270">
-          <h3>Петя Демин</h3>
-          <p>1500</p>
-          <p>#бургер #бар #футбол #концерт #крафт</p>
-          <p>хочет посетить:</p>
-          <ul>
+        <article class="user">
+          <img class="user__img" src="img/demin-s.jpg" width="270" height="270" alt="Аватар пользователя Петя Демин">
+          <h3 class="user__header">Петя Демин</h3>
+          <div class="user__status user__status--offline"></div>
+          <button class="user__like-button" type="button">
+            <svg width="13" height="11">
+              <use xlink:href="img/sprite.svg#icon-like"></use>
+            </svg>
+          </button>
+          <p class="user__subscribers">1500</p>
+          <p class="user__tags">#бургер #бар #футбол #концерт #крафт</p>
+          <p class="user__legend">хочет посетить:</p>
+          <ul class="user__countries">
             <li>Бельгия</li>
             <li>Чехия</li>
           </ul>
-          <p>транспорт:</p>
-          <ul>
+          <p class="user__legend">транспорт:</p>
+          <ul class="user__transport">
             <li>
               <svg width="19" height="21">
                 <use xlink:href="img/sprite.svg#icon-airplane"></use>
@@ -892,23 +1027,29 @@
               </svg>
             </li>
           </ul>
-          <p>левел:</p>
-          <p>80</p>
-          <a href="!#">Позвать!</a>
+          <p class="user__legend">левел:</p>
+          <p class="user__level">80</p>
+          <a class="user__button button-yellow" href="!#">Позвать!</a>
         </article>
-        <article>
-          <img src="img/smolov-m.jpg" width="270" height="270">
-          <h3>Марк Смолов</h3>
-          <p>170</p>
-          <p>#рэп #тату #хайпбист #кроссовки #суприм</p>
-          <p>хочет посетить:</p>
-          <ul>
+        <article class="user">
+          <img class="user__img" src="img/smolov-m.jpg" width="270" height="270" alt="Аватар пользователя Марк Смолов">
+          <h3 class="user__header">Марк Смолов</h3>
+          <div class="user__status user__status--offline"></div>
+          <button class="user__like-button" type="button">
+            <svg width="13" height="11">
+              <use xlink:href="img/sprite.svg#icon-like"></use>
+            </svg>
+          </button>
+          <p class="user__subscribers">170</p>
+          <p class="user__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+          <p class="user__legend">хочет посетить:</p>
+          <ul class="user__countries">
             <li>США</li>
             <li>Австралия</li>
             <li>Доминикана</li>
           </ul>
-          <p>транспорт:</p>
-          <ul>
+          <p class="user__legend">транспорт:</p>
+          <ul class="user__transport">
             <li>
               <svg width="19" height="21">
                 <use xlink:href="img/sprite.svg#icon-airplane"></use>
@@ -930,22 +1071,28 @@
               </svg>
             </li>
           </ul>
-          <p>левел:</p>
-          <p>25</p>
-          <a href="!#">Позвать!</a>
+          <p class="user__legend">левел:</p>
+          <p class="user__level">25</p>
+          <a class="user__button button-yellow" href="!#">Позвать!</a>
         </article>
-        <article>
-          <img src="img/rogovaya-m.jpg" width="270" height="270">
-          <h3>Лариса Роговая</h3>
-          <p>23</p>
-          <p>#образование #карьера #учеба #линкедин</p>
-          <p>хочет посетить:</p>
-          <ul>
+        <article class="user">
+          <img class="user__img" src="img/rogovaya-m.jpg" width="270" height="270" alt="Аватар пользователя Лариса Роговая">
+          <h3 class="user__header">Лариса Роговая</h3>
+          <div class="user__status user__status--online"></div>
+          <button class="user__like-button" type="button">
+            <svg width="13" height="11">
+              <use xlink:href="img/sprite.svg#icon-like"></use>
+            </svg>
+          </button>
+          <p class="user__subscribers">23</p>
+          <p class="user__tags">#образование #карьера #учеба #линкедин</p>
+          <p class="user__legend">хочет посетить:</p>
+          <ul class="user__countries">
             <li>Великобритания</li>
             <li>Германия</li>
           </ul>
-          <p>транспорт:</p>
-          <ul>
+          <p class="user__legend">транспорт:</p>
+          <ul class="user__transport">
             <li>
               <svg width="19" height="21">
                 <use xlink:href="img/sprite.svg#icon-airplane"></use>
@@ -967,14 +1114,22 @@
               </svg>
             </li>
           </ul>
-          <p>левел:</p>
-          <p>50</p>
-          <a href="!#">Позвать!</a>
+          <p class="user__legend">левел:</p>
+          <p class="user__level">50</p>
+          <a class="user__button button-yellow" href="!#">Позвать!</a>
         </article>
-        <a href="!#">Показать еще</a>
-        <div>
-          <a href="!#">Назад</a>
-          <a href="!#">Вперед</a>
+        <a class="companions__button" href="!#">Показать еще</a>
+        <div class="companions-navigation">
+          <a class="companions-navigation__item companions-navigation__item--back" href="!#">
+            <svg width="10" height="18">
+              <use xlink:href="img/sprite.svg#icon-page-left"></use>
+            </svg>
+          </a>
+          <a class="companions-navigation__item companions-navigation__item--forward" href="!#">
+            <svg width="10" height="18">
+              <use xlink:href="img/sprite.svg#icon-page-right"></use>
+            </svg>
+          </a>
         </div>
       </section>
 

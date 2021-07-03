@@ -1,0 +1,93 @@
+.user {
+  background-color: @basic-white;
+  border-radius: 20px;
+}
+
+.user__img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.user__header {
+  margin: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: @basic-blue-light;
+}
+
+.user__status {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+
+  &--offline {
+    background-color: @coral-red;
+  }
+
+  &--online {
+    background-color: @apple-green;
+  }
+}
+
+.user__like-button {
+  width: 31px;
+  height: 31px;
+  border: none;
+  border-radius: 50%;
+  background-color: @basic-violet-light;
+  fill: rgba(@background-blue, 0.5);
+
+  &--active {
+    background-color: @basic-pink;
+    fill: @basic-red;
+  }
+}
+
+.user__subscribers {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: @basic-blue;
+}
+
+.user__tags {
+  margin: 0;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @special-grey;
+}
+
+.user__legend {
+  margin: 0;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @special-grey;
+}
+
+.user__countries {
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @basic-blue-light;
+}
+
+.user__level {
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: @basic-blue-light;
+}
+
+.user__button {
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: @basic-blue;
+}
