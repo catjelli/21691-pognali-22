@@ -1,19 +1,44 @@
 .registration-address {
+  padding-top: 30px;
+  padding-bottom: 35px;
+  border-radius: 0 0 25px 25px;
   color: @basic-blue-light;
   background-color: @basic-yellow;
 }
 
 .registration-address__text {
-  margin: 0;
+  position: relative;
+  padding-left: 61px;
+  margin: 0 0 32px 0;
   line-height: 22px;
   font-weight: 700;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url("../img/icons/icon_map_mark.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .registration-address__link {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  padding: 22px 22px 22px 22px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
+  border: 3px solid @basic-blue-light;
+  border-radius: 10px;
   color: @basic-blue-light;
+}
+
+.registration-address__link svg {
+  fill: @basic-blue-light;
 }

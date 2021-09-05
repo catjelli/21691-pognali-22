@@ -19,47 +19,47 @@
 
   <body class="page__body">
 
-  <header class="page-header">
-    <a>
-      <img src="img/logo_s.svg" width="96" height="15" alt="Логотип сайта Погнали">
-    </a>
-    <nav class="navigation">
-      <ul>
-        <li>
-          <a href="!#">О сервисе</a>
-        </li>
-        <li>
-          <a href="form.html">Направления</a>
-        </li>
-        <li>
-          <a href="catalog.html">Попутчики</a>
-        </li>
-      </ul>
-      <a href="!#">Авторизация</a>
-      <ul>
-        <li>
-          <a href="tel:88005558628">8 800 555-86-28</a>
-        </li>
-        <li>
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="!#">Facebook</a>
-        </li>
-        <li>
-          <a href="!#">VK</a>
-        </li>
-        <li>
-          <a href="!#">Instagram</a>
-        </li>
-      </ul>
-    </nav>
-    <button type="button" aria-label="Открыть/закрыть меню"></button>
-  </header>
+    <header class="page-header">
+      <a>
+       <img src="img/logo_s.svg" width="96" height="15" alt="Логотип сайта Погнали">
+      </a>
+      <nav class="navigation">
+        <ul>
+          <li>
+            <a href="!#">О сервисе</a>
+          </li>
+          <li>
+            <a href="form.html">Направления</a>
+          </li>
+          <li>
+            <a href="catalog.html">Попутчики</a>
+           </li>
+        </ul>
+        <a href="!#">Авторизация</a>
+        <ul>
+          <li>
+            <a href="tel:88005558628">8 800 555-86-28</a>
+          </li>
+          <li>
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="!#">Facebook</a>
+          </li>
+          <li>
+            <a href="!#">VK</a>
+          </li>
+          <li>
+            <a href="!#">Instagram</a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" aria-label="Открыть/закрыть меню"></button>
+    </header>
 
-  <main>
+    <main>
     <section class="index-cover">
       <div class="container">
         <h1 class="index-cover__title">В путешествие<br>с крутыми попутчиками!</h1>
@@ -286,10 +286,14 @@
         <p class="registration__text">Зарегистрируйтесь, <br>это быстро и бесплатно! <br>Уже зарегистрированы? Тогда <br>скорее <a
           class="registration__link" href="!#">авторизуйтесь</a>.</p>
         <form class="registration__form" method="POST" action="https://echo.htmlacademy.ru">
-          <input type="email">
-          <button type="submit" aria-label="Регистрация"></button>
+          <input type="email" placeholder="E-mail">
+          <button type="submit" aria-label="Регистрация">
+            <svg width="12" height="14">
+              <use xlink:href="img/sprite.svg#icon-triangle"></use>
+            </svg>
+          </button>
         </form>
-        <p class="registration__text">Остались вопросы? Мы с радостью на них ответим!</p>
+        <p class="registration__text">Остались вопросы? <br>Мы с радостью на них ответим!</p>
         <ul class="registration-contacts">
           <li class="registration-contacts__item">
             <a class="registration-contacts__link registration-contacts__link--phone" href="tel:88005558628">8 800
@@ -304,50 +308,61 @@
 
     <section class="registration-address">
       <div class="container">
-        <p class="registration-address__text">ул. Большая Конюшенная, 19/8</p>
-        <a class="registration-address__link" href="!#">Проложить маршрут</a>
-        <iframe class="contacts__map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056732!2d30.32085335167924!3d59.9387191689652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMTg2!5e0!3m2!1sru!2sde!4v1616864737603!5m2!1sru!2sde"
-                width="320" height="424">
+        <p class="registration-address__text">ул. Большая <br>Конюшенная, 19/8</p>
+        <a class="registration-address__link" href="!#">Проложить маршрут
+          <svg width="12" height="14">
+            <use xlink:href="img/sprite.svg#icon-triangle"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="map">
+      <div class="map__container">
+        <iframe class="map__interactive"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056732!2d30.32085335167924!3d59.9387191689652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMTg2!5e0!3m2!1sru!2sde!4v1616864737603!5m2!1sru!2sde"
+          width="320" height="424">
         </iframe>
       </div>
     </section>
   </main>
 
-  <footer class="page-footer">
-    <a class="page-footer__link">
-      <img class="page-footer__logo" src="img/logo-s-blue.svg" width="96" height="15" alt="Логотип сайта Погнали">
-    </a>
-    <ul class="social">
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="!#">
-          <svg width="14" height="28">
-            <use xlink:href="img/sprite.svg#icon-facebook"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--vk" href="!#">
-          <svg width="31" height="16">
-            <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="!#">
-          <svg width="24" height="24">
-            <use xlink:href="img/sprite.svg#icon-instagram"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-    <div class="copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__link" href="!#">
-        <svg width="27" height="34">
-          <use xlink:href="img/sprite.svg#icon-html"></use>
-        </svg>
+    <footer class="page-footer">
+    <div class="container">
+      <a class="page-footer__link">
+        <img class="page-footer__logo" src="img/logo-s-blue.svg" width="96" height="15" alt="Логотип сайта Погнали">
       </a>
+      <ul class="social page-footer__social">
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="!#">
+            <svg width="14" height="28">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="!#">
+            <svg width="31" height="16">
+              <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="!#">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="!#">
+          <svg width="27" height="34">
+            <use xlink:href="img/sprite.svg#icon-html"></use>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
 

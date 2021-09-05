@@ -140,4 +140,8 @@
     <path d="M10 8.89478L0.25 17.555L0.25 0.234521L10 8.89478Z"/>
   </symbol>
 
+  <symbol viewBox="0 0 12 14" id="icon-triangle">
+    <path d="M12 7L0 13.0622L0 0.937822L12 7Z"/>
+  </symbol>
+
 </svg>
