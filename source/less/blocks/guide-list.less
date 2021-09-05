@@ -1,6 +1,7 @@
 .guide-list {
   margin: 0;
   padding: 0;
+  padding-bottom: 39px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
@@ -8,20 +9,30 @@
 }
 
 .guide-list__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 21px 40px 24px;
+  border-radius: 10px 10px 0 0;
+
   &--first {
     background-color: @special-orange;
   }
 
   &--second {
+    margin-top: -20px;
     background-color: @orange;
   }
 
   &--third {
+    margin-top: -20px;
     background-color: @special-yellow-dark;
   }
 
   &--fourth {
+    margin-top: -20px;
+    padding-bottom: 24px;
     background-color: @basic-yellow;
+    border-radius: 10px;
   }
 }
 

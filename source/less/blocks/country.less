@@ -1,13 +1,35 @@
+.country {
+  margin-bottom: 11px;
+  display: flex;
+  flex-direction: column;
+}
+
 .country__img {
+  display: block;
   border-radius: 10px;
 }
 
 .country__header {
   margin: 0;
+  margin-bottom: 2px;
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
   color: @basic-black;
+}
+
+.country__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 41px;
+  margin-top: -20px;
+  padding-top: 26px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  background-color: @basic-white;
+  border-radius: 10px;
+  z-index: 10;
 }
 
 .country__description {

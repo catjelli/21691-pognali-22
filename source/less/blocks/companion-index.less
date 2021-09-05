@@ -1,9 +1,21 @@
 .companion-index {
+  position: relative;
+  margin-bottom: 9px;
   background-color: @basic-white;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .companion-index__level {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 13px;
+  width: 60px;
+  height: 47px;
+  text-align: center;
+  border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -19,18 +31,62 @@
   font-weight: 400;
 }
 
+.companion-index__img {
+  border-radius: 10px 10px 0 0;
+}
+
+.companion-index__countries {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  padding-left: 62px;
+  padding-right: 62px;
+
+  &--demin {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+
+.companion-index__flag {
+  width: 35px;
+  height: 25px;
+}
+
 .companion-index__header {
   margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .companion-index__header-link {
+  position: relative;
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
   color: @basic-blue-light;
 }
 
+.companion-index__header-link::before {
+  position: absolute;
+  bottom: 10px;
+  left: -15px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: @coral-red;
+}
+
+.companion-index__header-link--demin::before {
+  background-color: @apple-green;
+}
+
 .companion-index__tags {
+  margin: 0 auto;
+  text-align: center;
+  width: 180px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
