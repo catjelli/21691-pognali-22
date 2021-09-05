@@ -1,11 +1,26 @@
 .page-cover {
+  padding-top: 60px;
+  padding-bottom: 12px;
   background-color: @basic-blue;
+  border-radius: 0 0 25px 25px;
 }
 
 .page-cover__title {
+  position: relative;
   margin: 0;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
   color: @basic-white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    width: 214px;
+    height: 5px;
+    background-color: @special-orange;
+    border-radius: 4px;
+  }
 }
